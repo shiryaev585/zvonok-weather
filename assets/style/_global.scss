@@ -1,0 +1,44 @@
+$font-main: 'Geologica', sans-serif;
+
+$xs: 768px;
+$sm: 1024px;
+$md: 1280px;
+$lg: 1440px;
+
+@mixin xs-down {
+    @media only screen and (max-width: $xs) {
+        @content;
+    }
+}
+
+@mixin sm-down {
+    @media only screen and (max-width: $sm) {
+        @content;
+    }
+}
+
+@mixin md-down {
+    @media only screen and (max-width: $md) {
+        @content;
+    }
+}
+
+@mixin lg-down {
+    @media only screen and (max-width: $lg) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            @content;
+        }
+    }
+}
